@@ -1,0 +1,37 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Chat IA Bonito</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./Assets/Styles.css" />
+</head>
+<body>
+  <div class="background-blur"></div>
+  <div class="chat-container">
+    <div class="theme-image"></div>
+    <header class="chat-header">
+      <h1>Chat IA</h1>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </header>
+    <div id="messages" class="messages"></div>
+    <form id="chat-form" class="chat-form">
+      <input
+        id="user-input"
+        type="text"
+        placeholder="Escribe tu mensaje..."
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <script src="security.js"></script>
+  <script src="scriptCopy.js"></script>
+</body>
+</html>

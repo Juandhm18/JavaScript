@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get weather</title>
+    <link rel="stylesheet" href="./climajs.css">
+  </head>
+  <body>
+    <section class="weather-content">
+        <h1>Buscador del clima</h1>
+        <section>
+        <div class="consult">
+            <section>
+              <div id="result"></div>
+            </section> 
+            <!-- <h5>Clima en Bogota</h5>
+            <img src="" alt="">
+            <h2>28°C</h2>
+            <p>Max: 29°C</p>
+            <p>Min: 27°C</p> -->
+            <input type="text" onkeydown="checkEnter(event)" id="samuel" placeholder="Write your city...">
+            <button type="submit" onclick="getWeather()">Search</button>
+        </div>
+        </section>
+    </section>
+</body>
+</html>
+<script src="./script.js"></script>

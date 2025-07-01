@@ -1,0 +1,293 @@
+/* styles.css */
+:root {
+  --bg: #f0f2f5;
+  --fg: #333;
+  --bubble-user: #4e9af1;
+  --bubble-bot: #e5e5ea;
+  --text-user: #fff;
+  --text-bot: #111;
+  --header: #fff;
+  --shadow: rgba(0,0,0,0.1);
+  --transition: 0.3s ease;
+  --font: 'Inter', sans-serif;
+}
+[data-theme="dark"] {
+  --bg: #1e1e2f;
+  --fg: #ddd;
+  --bubble-user: #6c9ef8;
+  --bubble-bot: #333;
+  --text-user: #fff;
+  --text-bot: #eee;
+  --header: #2a2a3a;
+  --shadow: rgba(0,0,0,0.5);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), color var(--transition);
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 480px;
+  height: 90vh;
+  background: var(--header);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px var(--shadow);
+  overflow: hidden;
+  transition: background var(--transition);
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: var(--header);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.chat-header h1 { font-size: 1.2rem; font-weight: 600; }
+.chat-header button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+.chat-header button:hover { transform: rotate(20deg); }
+
+.messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+.messages::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.05);
+  border-radius: 3px;
+}
+.messages::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+
+.message {
+  display: flex;
+  opacity: 0;
+  animation: fadeIn 0.4s forwards;
+}
+.message.user { justify-content: flex-end; }
+.message.bot { justify-content: flex-start; }
+
+.bubble {
+  max-width: 75%;
+  padding: 0.8rem 1.2rem;
+  border-radius: 16px;
+  position: relative;
+  line-height: 1.4;
+  word-break: break-word;
+  transition: background var(--transition);
+}
+.message.user .bubble {
+  background: var(--bubble-user);
+  color: var(--text-user);
+  border-bottom-right-radius: 4px;
+}
+.message.bot .bubble {
+  background: var(--bubble-bot);
+  color: var(--text-bot);
+  border-bottom-left-radius: 4px;
+}
+
+/* Estilos para el contenido del mensaje y timestamp */
+.message-content {
+  margin-bottom: 0.3rem;
+}
+
+.message-time {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  text-align: right;
+}
+
+.message.user .message-time {
+  text-align: right;
+}
+
+.message.bot .message-time {
+  text-align: left;
+}
+
+/* Estados de carga */
+.message.loading .bubble {
+  background: var(--bubble-bot);
+  color: var(--text-bot);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+/* Estados de error */
+.message.error .bubble {
+  background: #ff6b6b;
+  color: white;
+  border: 1px solid #ff5252;
+}
+
+.message.error .bubble.error {
+  background: #ff6b6b;
+  color: white;
+}
+
+/* Indicador de carga con puntos */
+.message.loading .bubble::after {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  animation: loadingDots 1.4s infinite;
+  margin-left: 4px;
+}
+
+@keyframes loadingDots {
+  0%, 80%, 100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.chat-form {
+  display: flex;
+  gap: 1px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+.chat-form input {
+  flex: 1;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  background: var(--bg);
+  transition: background var(--transition);
+}
+.chat-form input:focus {
+  outline: none;
+  background: #fff;
+}
+.chat-form button {
+  border: none;
+  background: var(--bubble-user);
+  color: var(--text-user);
+  padding: 0 1.5rem;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+.chat-form button:hover {
+  background: #357ab8;
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110vw; /* Un poco más grande para evitar bordes al moverse */
+  height: 110vh;
+  background-image: url(./robo.avif);
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+  animation: moveBackground 15s ease-in-out infinite alternate;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translate(-10px, -10px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.theme-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 20%;
+  transition: background-image 0.5s ease;
+  border-radius: 12px;
+}
+
+html:not([data-theme="dark"]) .theme-image {
+  background-image: url(./ia.jpg);
+  filter: blur(3px);
+}
+
+html[data-theme="dark"] .theme-image {
+  background-image: url(./iaNoche.jpg);
+}
+
+.chat-container {
+  position: relative;
+  z-index: 2;
+  background: var(--header);
+}
+
+/* Animación continua suave */
+@keyframes floatingBackground {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translate(-10px, -10px);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+.theme-image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.2;
+  transition: background-image 0.5s ease;
+  border-radius: 12px;
+
+  animation: floatingBackground 20s ease-in-out infinite;
+}
