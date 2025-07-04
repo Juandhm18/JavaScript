@@ -13,6 +13,13 @@
       "estrellas": 5,
       "genero": "Ciencia Ficción",
       "id": "3"
+    },
+    {
+      "nombre": "shrek",
+      "foto": "https://m.media-amazon.com/images/S/pv-target-images/030f9ae65cadc9afc0e3c51ed35d2ddeb814f213d7a87fc5aa4445738ebb32b9.jpg",
+      "estrellas": 4,
+      "genero": "comedia",
+      "id": "4b81"
     }
   ]
 }
