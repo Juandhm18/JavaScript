@@ -1,19 +1,25 @@
 {
-  "productos": [
+  "peliculas": [
     {
-      "nombre": "laptop",
-      "precio": 1400,
-      "id": "1"
+      "id": "1",
+      "nombre": "Inception",
+      "foto": "https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
+      "estrellas": 5,
+      "genero": "Ciencia Ficción"
     },
     {
       "id": "2",
-      "nombre": "mouse",
-      "precio": 25
+      "nombre": "El Padrino",
+      "foto": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+      "estrellas": 5,
+      "genero": "Drama"
     },
     {
-      "id": "39c4",
-      "nombre": "monitor",
-      "precio": 200
+      "nombre": "Interstellar",
+      "foto": "https://image.tmdb.org/t/p/w500/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
+      "estrellas": 5,
+      "genero": "Ciencia Ficción",
+      "id": "3"
     }
   ]
 }

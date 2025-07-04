@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Rating App</title>
+  <link rel="stylesheet" href="peliculas.css">
+</head>
+<body>
+  <h1>Movie Rating App</h1>
+  <button id="show-add-btn" style="display:block;margin:20px auto 0 auto;">Add new movie</button>
+  <section id="form-section" style="display:none;">
+    <h2>Add New Movie</h2>
+    <div id="error-message"></div>
+    <form id="form-movie" novalidate>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <span class="field-error" id="error-name"></span>
+      </div>
+      <div class="form-group">
+        <label for="photo">Photo URL</label>
+        <input type="url" id="photo" name="photo" placeholder="Photo URL" required>
+        <span class="field-error" id="error-photo"></span>
+      </div>
+      <div class="form-group">
+        <label for="stars">Stars (0-5)</label>
+        <input type="number" id="stars" name="stars" placeholder="Stars (0-5)" min="0" max="5" step="1" required>
+        <span class="field-error" id="error-stars"></span>
+      </div>
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        <input type="text" id="genre" name="genre" placeholder="Genre" required>
+        <span class="field-error" id="error-genre"></span>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <button type="submit">Add</button>
+        <button type="button" id="cancel-add-btn">Cancel</button>
+      </div>
+    </form>
+  </section>
+  <section id="peliculas-section">
+    <h2>Movies</h2>
+    <div id="movies-list"></div>
+  </section>
+  <script src="peliculas.js"></script>
+</body>
+</html> 
