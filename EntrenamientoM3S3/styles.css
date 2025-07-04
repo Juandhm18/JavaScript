@@ -2,8 +2,9 @@
 
 body {
   font-family: 'Orbitron', Arial, sans-serif;
-  background: url('https://www.mubis.es/media/users/3724/90458/hollywood-elige-las-100-mejores-peliculas-cual-es-la-tuya-original.jpg') no-repeat center top fixed, linear-gradient(135deg, #232526 0%, #414345 100%);
-  background-size: cover;
+  background: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center fixed, linear-gradient(135deg, #232526 0%, #414345 100%);
+  background-size: 100% auto;
+  background-position: center;
   margin: 0;
   padding: 0;
   color: #e0e0e0;
@@ -15,7 +16,7 @@ h1 {
   margin-top: 30px;
   font-size: 2.5em;
   letter-spacing: 2px;
-  color: #ff2d55;
+  color: #4a90e2;
 }
 
 #form-section, #peliculas-section {
@@ -24,11 +25,11 @@ h1 {
   background: rgba(30, 30, 40, 0.97);
   padding: 24px;
   border-radius: 16px;
-  border: 1.5px solid #ff2d55;
+  border: 1.5px solid #4a90e2;
 }
 
 #form-section h2, #peliculas-section h2 {
-  color: #ff2d55;
+  color: #4a90e2;
 }
 
 #form-movie {
@@ -50,17 +51,17 @@ h1 {
 
 #form-movie input:focus {
   background: #fff;
-  color: #ff2d55;
+  color: #4a90e2;
 }
 
 #form-movie input::placeholder {
-  color: #ff2d55;
+  color: #4a90e2;
   opacity: 0.8;
   font-size: 1em;
 }
 
 #form-movie button {
-  background: linear-gradient(90deg, #ff2d55 0%, #ff6f61 100%);
+  background: linear-gradient(90deg, #4a90e2 0%, #5ba0f2 100%);
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -69,14 +70,14 @@ h1 {
 }
 
 #form-movie button:hover {
-  background: linear-gradient(90deg, #ff6f61 0%, #ff2d55 100%);
+  background: linear-gradient(90deg, #5ba0f2 0%, #4a90e2 100%);
   color: #fff;
 }
 
 #error-message {
   color: #fff;
-  background: #ff2d55;
-  border: 1px solid #ff2d55;
+  background: #e74c3c;
+  border: 1px solid #e74c3c;
   border-radius: 6px;
   padding: 10px;
   margin-bottom: 10px;
@@ -94,7 +95,7 @@ h1 {
 
 .movie-card {
   background: rgba(20, 20, 30, 0.98);
-  border: 1.5px solid #ff2d55;
+  border: 1.5px solid #4a90e2;
   border-radius: 14px;
   width: 200px;
   padding: 16px 10px 18px 10px;
@@ -110,7 +111,7 @@ h1 {
   height: 220px;
   object-fit: cover;
   border-radius: 8px;
-  border: 1.5px solid #ff2d55;
+  border: 1.5px solid #4a90e2;
 }
 .movie-card h3, .movie-card p, .movie-card .stars, .movie-card .score {
   transition: none;
@@ -125,44 +126,52 @@ h1 {
   letter-spacing: 2px;
 }
 .movie-card .score {
-  color: #ff2d55;
+  color: #4a90e2;
   font-size: 1em;
   margin-left: 4px;
   font-weight: bold;
 }
 .movie-card .edit-btn {
   margin-top: 10px;
-  background: linear-gradient(90deg, #fff 0%, #ff2d55 100%);
-  color: #ff2d55;
+  background: linear-gradient(90deg, #4a90e2 0%, #5ba0f2 100%);
+  color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 7px 16px;
+  padding: 8px 18px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.2s, color 0.2s;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(74, 144, 226, 0.3);
 }
 .movie-card .edit-btn:hover {
-  background: linear-gradient(90deg, #ff2d55 0%, #fff 100%);
+  background: linear-gradient(90deg, #5ba0f2 0%, #4a90e2 100%);
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
 }
 .movie-card .delete-btn {
   margin-top: 10px;
-  background: linear-gradient(90deg, #ff2d55 0%, #ff6f61 100%);
+  background: linear-gradient(90deg, #e74c3c 0%, #f39c12 100%);
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 7px 16px;
+  padding: 8px 18px;
   cursor: pointer;
   font-weight: bold;
-  transition: background 0.2s, color 0.2s;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(231, 76, 60, 0.3);
 }
 .movie-card .delete-btn:hover {
-  background: linear-gradient(90deg, #ff6f61 0%, #ff2d55 100%);
+  background: linear-gradient(90deg, #f39c12 0%, #e74c3c 100%);
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4);
 }
 
 #show-add-btn {
-  background: linear-gradient(90deg, #ff2d55 0%, #ff6f61 100%);
+  background: linear-gradient(90deg, #4a90e2 0%, #5ba0f2 100%);
   color: #fff;
   font-size: 1.1em;
   font-weight: bold;
@@ -171,16 +180,19 @@ h1 {
   padding: 12px 32px;
   margin-bottom: 18px;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(74, 144, 226, 0.3);
 }
 #show-add-btn:hover {
-  background: linear-gradient(90deg, #ff6f61 0%, #ff2d55 100%);
+  background: linear-gradient(90deg, #5ba0f2 0%, #4a90e2 100%);
   color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(74, 144, 226, 0.4);
 }
 
 .movie-card.editing {
-  background: #fff0f3;
-  border: 2px solid #ff2d55;
+  background: #f8f9ff;
+  border: 2px solid #4a90e2;
 }
 .movie-card.editing input {
   width: 90%;
@@ -189,7 +201,7 @@ h1 {
   padding: 8px 10px;
   font-size: 1em;
   border-radius: 6px;
-  border: 1.5px solid #ff2d55;
+  border: 1.5px solid #4a90e2;
   background: #fff;
   color: #232526;
 }
@@ -209,19 +221,19 @@ h1 {
   transition: background 0.2s, color 0.2s;
 }
 .save-btn {
-  background: linear-gradient(90deg, #ff2d55 0%, #ff6f61 100%);
+  background: linear-gradient(90deg, #4a90e2 0%, #5ba0f2 100%);
   color: #fff;
 }
 .save-btn:hover {
-  background: linear-gradient(90deg, #ff6f61 0%, #ff2d55 100%);
+  background: linear-gradient(90deg, #5ba0f2 0%, #4a90e2 100%);
 }
 .cancel-btn {
   background: #fff;
-  color: #ff2d55;
-  border: 2px solid #ff2d55;
+  color: #4a90e2;
+  border: 2px solid #4a90e2;
 }
 .cancel-btn:hover {
-  background: #ff2d55;
+  background: #4a90e2;
   color: #fff;
 }
 
@@ -271,15 +283,15 @@ h1 {
 label {
   font-weight: bold;
   margin-bottom: 2px;
-  color: #ff2d55;
+  color: #4a90e2;
   transition: none;
 }
 label:hover {
-  color: #ff2d55;
+  color: #4a90e2;
   transition: none;
 }
 .field-error {
-  color: #ff2d55;
+  color: #e74c3c;
   font-size: 0.95em;
   min-height: 18px;
   margin-top: 2px;
