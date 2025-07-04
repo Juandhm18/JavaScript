@@ -1,18 +1,11 @@
 {
   "peliculas": [
     {
-      "id": "1",
-      "nombre": "Inception",
-      "foto": "https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
-      "estrellas": 5,
-      "genero": "Ciencia Ficción"
-    },
-    {
-      "id": "2",
       "nombre": "El Padrino",
       "foto": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
       "estrellas": 5,
-      "genero": "Drama"
+      "genero": "Drama",
+      "id": "2"
     },
     {
       "nombre": "Interstellar",
