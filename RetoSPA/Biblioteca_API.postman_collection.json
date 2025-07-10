@@ -1,0 +1,537 @@
+{
+  "info": {
+    "name": "Biblioteca Pública API",
+    "description": "Colección de pruebas para la API de gestión de biblioteca pública",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Obtener todos los usuarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"]
+            },
+            "description": "Obtiene la lista completa de usuarios registrados en el sistema"
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar usuario por email",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users?email=admin@biblioteca.com",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "admin@biblioteca.com"
+                }
+              ]
+            },
+            "description": "Busca un usuario específico por su dirección de email"
+          },
+          "response": []
+        },
+        {
+          "name": "Crear nuevo usuario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"María García\",\n  \"email\": \"maria@email.com\",\n  \"password\": \"maria123\",\n  \"role\": \"visitante\",\n  \"phone\": \"3005551234\",\n  \"createdAt\": \"2024-01-25\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/users",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"]
+            },
+            "description": "Crea un nuevo usuario en el sistema"
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar usuario",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"María García Actualizada\",\n  \"email\": \"maria@email.com\",\n  \"password\": \"maria123\",\n  \"role\": \"visitante\",\n  \"phone\": \"3005555678\",\n  \"createdAt\": \"2024-01-25\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/users/3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users", "3"]
+            },
+            "description": "Actualiza la información de un usuario existente"
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar usuario",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users/3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users", "3"]
+            },
+            "description": "Elimina un usuario del sistema"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints para gestión de usuarios"
+    },
+    {
+      "name": "Libros",
+      "item": [
+        {
+          "name": "Obtener todos los libros",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"]
+            },
+            "description": "Obtiene la lista completa de libros en el catálogo"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener libro por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books", "1"]
+            },
+            "description": "Obtiene la información detallada de un libro específico"
+          },
+          "response": []
+        },
+        {
+          "name": "Crear nuevo libro",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Don Quijote de la Mancha\",\n  \"author\": \"Miguel de Cervantes\",\n  \"isbn\": \"978-84-376-0494-7\",\n  \"category\": \"Literatura Clásica\",\n  \"available\": true,\n  \"totalCopies\": 5,\n  \"availableCopies\": 5,\n  \"description\": \"La obra maestra de la literatura española que narra las aventuras del ingenioso hidalgo.\",\n  \"publishedYear\": 1605,\n  \"createdAt\": \"2024-01-25\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"]
+            },
+            "description": "Agrega un nuevo libro al catálogo de la biblioteca"
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar libro",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Don Quijote de la Mancha (Edición Actualizada)\",\n  \"author\": \"Miguel de Cervantes\",\n  \"isbn\": \"978-84-376-0494-7\",\n  \"category\": \"Literatura Clásica\",\n  \"available\": true,\n  \"totalCopies\": 6,\n  \"availableCopies\": 4,\n  \"description\": \"La obra maestra de la literatura española que narra las aventuras del ingenioso hidalgo. Edición actualizada con notas explicativas.\",\n  \"publishedYear\": 1605,\n  \"createdAt\": \"2024-01-25\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/books/4",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books", "4"]
+            },
+            "description": "Actualiza la información de un libro existente"
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar libro",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/4",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books", "4"]
+            },
+            "description": "Elimina un libro del catálogo"
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar libros por categoría",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books?category=Fantasía",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "Fantasía"
+                }
+              ]
+            },
+            "description": "Filtra libros por categoría específica"
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar libros disponibles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books?available=true",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"],
+              "query": [
+                {
+                  "key": "available",
+                  "value": "true"
+                }
+              ]
+            },
+            "description": "Filtra solo los libros que están disponibles para reserva"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints para gestión del catálogo de libros"
+    },
+    {
+      "name": "Reservas",
+      "item": [
+        {
+          "name": "Obtener todas las reservas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/reservations",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reservations"]
+            },
+            "description": "Obtiene la lista completa de reservas (solo para bibliotecarios)"
+          },
+          "response": []
+        },
+        {
+          "name": "Obtener reservas de un usuario",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/reservations?userId=2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reservations"],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "2"
+                }
+              ]
+            },
+            "description": "Obtiene las reservas de un usuario específico"
+          },
+          "response": []
+        },
+        {
+          "name": "Crear nueva reserva",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": 2,\n  \"bookId\": 2,\n  \"reservationDate\": \"2024-01-25\",\n  \"returnDate\": \"2024-02-24\",\n  \"status\": \"active\",\n  \"createdAt\": \"2024-01-25\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/reservations",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reservations"]
+            },
+            "description": "Crea una nueva reserva de libro"
+          },
+          "response": []
+        },
+        {
+          "name": "Actualizar estado de reserva",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 2,\n  \"userId\": 2,\n  \"bookId\": 2,\n  \"reservationDate\": \"2024-01-25\",\n  \"returnDate\": \"2024-02-24\",\n  \"status\": \"returned\",\n  \"createdAt\": \"2024-01-25\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/reservations/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reservations", "2"]
+            },
+            "description": "Actualiza el estado de una reserva (ej: devuelto, vencido, etc.)"
+          },
+          "response": []
+        },
+        {
+          "name": "Eliminar reserva",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/reservations/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reservations", "2"]
+            },
+            "description": "Elimina una reserva del sistema"
+          },
+          "response": []
+        },
+        {
+          "name": "Buscar reservas por estado",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/reservations?status=active",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["reservations"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "active"
+                }
+              ]
+            },
+            "description": "Filtra reservas por estado específico"
+          },
+          "response": []
+        }
+      ],
+      "description": "Endpoints para gestión de reservas de libros"
+    },
+    {
+      "name": "Pruebas de Autenticación",
+      "item": [
+        {
+          "name": "Login - Usuario Bibliotecario",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users?email=admin@biblioteca.com&password=admin123",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "admin@biblioteca.com"
+                },
+                {
+                  "key": "password",
+                  "value": "admin123"
+                }
+              ]
+            },
+            "description": "Simula el proceso de login para un bibliotecario"
+          },
+          "response": []
+        },
+        {
+          "name": "Login - Usuario Visitante",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users?email=juan@email.com&password=user123",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "juan@email.com"
+                },
+                {
+                  "key": "password",
+                  "value": "user123"
+                }
+              ]
+            },
+            "description": "Simula el proceso de login para un visitante"
+          },
+          "response": []
+        },
+        {
+          "name": "Login - Credenciales Inválidas",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/users?email=usuario@falso.com&password=password123",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"],
+              "query": [
+                {
+                  "key": "email",
+                  "value": "usuario@falso.com"
+                },
+                {
+                  "key": "password",
+                  "value": "password123"
+                }
+              ]
+            },
+            "description": "Prueba el manejo de credenciales inválidas"
+          },
+          "response": []
+        }
+      ],
+      "description": "Pruebas específicas para el sistema de autenticación"
+    },
+    {
+      "name": "Pruebas de Integración",
+      "item": [
+        {
+          "name": "Flujo completo: Crear libro y reservarlo",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Libro de Prueba\",\n  \"author\": \"Autor de Prueba\",\n  \"isbn\": \"978-123-456-789-0\",\n  \"category\": \"Pruebas\",\n  \"available\": true,\n  \"totalCopies\": 3,\n  \"availableCopies\": 3,\n  \"description\": \"Libro creado para pruebas de integración\",\n  \"publishedYear\": 2024,\n  \"createdAt\": \"2024-01-25\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"]
+            },
+            "description": "Primer paso: Crear un libro para luego reservarlo"
+          },
+          "response": []
+        },
+        {
+          "name": "Verificar disponibilidad después de reserva",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["books"]
+            },
+            "description": "Verifica que la disponibilidad se actualice correctamente después de crear reservas"
+          },
+          "response": []
+        }
+      ],
+      "description": "Pruebas que validan el funcionamiento integrado del sistema"
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+} 

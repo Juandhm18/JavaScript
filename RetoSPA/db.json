@@ -1,10 +1,74 @@
 {
-    "user": [
-    {"id": 1,
-    "name": "Jose Lopez",
-    "email": "correo@ejemplo.com",
-    "phone": "1234567890",
-    "enrollNumber": "12345678901234",
-    "dateOfAdmission": "08-Dec-2021"}
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin Bibliotecario",
+      "email": "admin@biblioteca.com",
+      "password": "admin123",
+      "role": "bibliotecario",
+      "phone": "3001234567",
+      "createdAt": "2024-01-01"
+    },
+    {
+      "id": 2,
+      "name": "Juan Pérez",
+      "email": "juan@email.com",
+      "password": "user123",
+      "role": "visitante",
+      "phone": "3009876543",
+      "createdAt": "2024-01-15"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "title": "El Señor de los Anillos",
+      "author": "J.R.R. Tolkien",
+      "isbn": "978-84-450-7179-3",
+      "category": "Fantasía",
+      "available": true,
+      "totalCopies": 3,
+      "availableCopies": 2,
+      "description": "Una épica historia de fantasía que sigue las aventuras de Frodo Bolsón.",
+      "publishedYear": 1954,
+      "createdAt": "2024-01-01"
+    },
+    {
+      "id": 2,
+      "title": "Cien años de soledad",
+      "author": "Gabriel García Márquez",
+      "isbn": "978-84-397-2077-7",
+      "category": "Literatura",
+      "available": true,
+      "totalCopies": 2,
+      "availableCopies": 1,
+      "description": "La historia de la familia Buendía a lo largo de siete generaciones.",
+      "publishedYear": 1967,
+      "createdAt": "2024-01-01"
+    },
+    {
+      "id": 3,
+      "title": "1984",
+      "author": "George Orwell",
+      "isbn": "978-84-397-2078-4",
+      "category": "Ciencia Ficción",
+      "available": true,
+      "totalCopies": 4,
+      "availableCopies": 3,
+      "description": "Una distopía que explora temas de vigilancia y control totalitario.",
+      "publishedYear": 1949,
+      "createdAt": "2024-01-01"
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "userId": 2,
+      "bookId": 1,
+      "reservationDate": "2024-01-20",
+      "returnDate": "2024-02-20",
+      "status": "active",
+      "createdAt": "2024-01-20"
+    }
+  ]
 }

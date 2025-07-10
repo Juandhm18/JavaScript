@@ -1,62 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Crud Operations</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Pública - Sistema de Reservas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <aside>
-    <h1>CRUD OPERATIONS</h1>
-    <div class="profile">
-      <img src="" alt="Profile">
-      <p>Tomas Restrepo</p>
-      <p class="role">Admin</p>
-    </div>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Course</li>
-        <li class="active">Users</li>
-        <li>Payment</li>
-        <li>Report</li>
-        <li>Settings</li>
-      </ul>
-    </nav>
-  </aside>
-
-  <main>
-    <div class="topbar">
-      <h2>Students List</h2>
-      <button class="add-user-btn" onclick="openForm()">Add New Student</button>
-    </div>
-    <div class="user-list">
-      <div class="user-list-header">
-        <div></div>
-        <div>Name</div>
-        <div>Email</div>
-        <div>Phone</div>
-        <div>Enroll Number</div>
-        <div>Date of admission</div>
-        <div></div>
-      </div>
-      <div id="userList"></div>
-    </div>
-  </main>
-
-  <div class="form-popup" id="userForm">
-    <input type="hidden" id="editId">
-    <input type="text" id="name" placeholder="Nombre Completo">
-    <input type="email" id="email" placeholder="correo@ejemplo.com">
-    <input type="tel" id="phone" placeholder="1234567890">
-    <input type="text" id="enrollNumber" placeholder="Numero de matricula">
-    <input type="text" id="dateOfAdmission" placeholder="Fecha de admision">
-    <button onclick="saveUser()">Save</button>
-    <button onclick="closeForm()">Cancel</button>
+  <!-- La aplicación SPA se cargará dinámicamente aquí -->
+  <div id="app">
+    <!-- Contenido dinámico -->
   </div>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
