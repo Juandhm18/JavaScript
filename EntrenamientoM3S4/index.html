@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Deportiva - Registro de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Título principal -->
+        <header>
+            <h1>Tienda Deportiva</h1>
+            <p>Registro de Clientes</p>
+        </header>
+
+        <!-- Formulario principal -->
+        <main>
+            <form id="userForm">
+                <!-- Campo para el nombre -->
+                <div class="form-group">
+                    <label for="userName">Nombre:</label>
+                    <input 
+                        type="text" 
+                        id="userName" 
+                        name="userName" 
+                        placeholder="Ingresa tu nombre"
+                        required
+                    >
+                    <div id="nameError" class="error"></div>
+                </div>
+
+                <!-- Campo para la edad -->
+                <div class="form-group">
+                    <label for="userAge">Edad:</label>
+                    <input 
+                        type="number" 
+                        id="userAge" 
+                        name="userAge" 
+                        placeholder="Ingresa tu edad"
+                        min="1" 
+                        max="120"
+                        required
+                    >
+                    <div id="ageError" class="error"></div>
+                </div>
+
+                <!-- Campo para el equipo favorito -->
+                <div class="form-group">
+                    <label for="userTeam">Equipo Favorito:</label>
+                    <input 
+                        type="text" 
+                        id="userTeam" 
+                        name="userTeam" 
+                        placeholder="Ingresa tu equipo favorito"
+                        required
+                    >
+                    <div id="teamError" class="error"></div>
+                </div>
+
+                <!-- Botones de acción -->
+                <div class="button-group">
+                    <button type="submit" class="btn-save">Guardar Datos</button>
+                    <button type="button" class="btn-clear" onclick="limpiarDatos()">Limpiar Datos</button>
+                </div>
+            </form>
+
+            <!-- Sección para mostrar mensajes de éxito -->
+            <div id="messageContainer" class="message-container"></div>
+
+            <!-- Sección para mostrar los datos guardados -->
+            <section class="output-section">
+                <h2>Datos Almacenados</h2>
+                <div id="output">
+                    <!-- Aquí se mostrarán los datos del Local Storage -->
+                </div>
+            </section>
+
+            <!-- Sección del contador de interacciones -->
+            <section class="counter-section">
+                <h2>Contador de Interacciones</h2>
+                <p>Has interactuado con esta página <strong id="interactionCounter">0</strong> veces en esta sesión.</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Script de JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html> 
