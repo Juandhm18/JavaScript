@@ -1,22 +1,22 @@
 # Tienda Deportiva - Registro de Clientes
 
-## Descripción del Proyecto
+## Project Description
 
-Este proyecto es una aplicación web interactiva diseñada para una tienda deportiva que permite registrar información de clientes. La aplicación incluye un formulario para capturar datos del cliente (nombre, edad y equipo favorito), almacenamiento persistente de datos, y un contador de interacciones de sesión.
+This project is an interactive web application designed for a sports store that allows customer information registration. The application includes a form to capture customer data (name, age, and favorite team), persistent data storage, and a session interaction counter.
 
-## Características Principales
+## Main Features
 
-### 📋 Formulario de Registro
-- **Campo Nombre**: Captura el nombre del cliente con validación
-- **Campo Edad**: Captura la edad con validación de rango (1-120 años)
-- **Campo Equipo Favorito**: Captura el equipo deportivo favorito del cliente
-- **Validación en tiempo real**: Muestra mensajes de error específicos
-- **Diseño responsivo**: Se adapta a diferentes tamaños de pantalla
+### 📋 Registration Form
+- **Name Field**: Captures the customer's name with validation
+- **Age Field**: Captures the age with range validation (1–120 years)
+- **Favorite Team Field**: Captures the customer's favorite sports team
+- **Real-time validation**: Displays specific error messages
+- **Responsive design**: Adapts to different screen sizes
 
-### 💾 Persistencia de Datos
-- **Local Storage**: Los datos del cliente se guardan permanentemente en el navegador
-- **Session Storage**: Contador de interacciones que se mantiene durante la sesión
-- **Recuperación automática**: Los datos se cargan automáticamente al recargar la página
+### 💾 Data Persistence
+- **Local Storage**: Customer data is permanently saved in the browser
+- **Session Storage**: Interaction counter maintained during the session
+- **Automatic recovery**: Data is automatically loaded when the page is reloaded
 
 ### 🎨 Interfaz de Usuario
 - **Tema deportivo**: Diseño profesional con colores neutros
@@ -24,82 +24,83 @@ Este proyecto es una aplicación web interactiva diseñada para una tienda depor
 - **Animaciones suaves**: Transiciones y efectos hover elegantes
 - **Accesibilidad**: Soporte para navegación por teclado y lectores de pantalla
 
-## Estructura del Proyecto
+## Project Structure
 
 ```
 EntrenamientoM3S4/
-├── index.html          # Estructura HTML principal
-├── styles.css          # Estilos CSS con tema deportivo
-├── script.js           # Lógica JavaScript completa
-└── README.md           # Documentación del proyecto
+├── index.html          # Main HTML structure
+├── styles.css          # CSS styles with sports theme
+├── script.js           # Full JavaScript logic
+└── README.md           # Project documentation
+
 ```
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- **HTML5**: Estructura semántica y accesible
-- **CSS3**: Estilos modernos con variables CSS y diseño responsivo
-- **JavaScript ES6+**: Lógica de programación funcional
-- **Local Storage API**: Almacenamiento persistente de datos
-- **Session Storage API**: Almacenamiento temporal de sesión
+- **HTML5**: Semantic and accessible structure
+- **CSS3**: Modern styles with CSS variables and responsive design
+- **JavaScript**: Functional programming logic
+- **Local Storage API**: Persistent data storage
+- **Session Storage API**: Temporary session storage
 
-## Funcionalidades Detalladas
+## Detailed Features
 
-### 1. Captura de Datos
-- Formulario con tres campos obligatorios
-- Validación en tiempo real con mensajes de error específicos
-- Prevención de envío con datos inválidos
+### 1. Data Capture
+- Form with three required fields
+- Real-time validation with specific error messages
+- Prevents submission with invalid data
 
-### 2. Almacenamiento
-- **Local Storage**: Datos del cliente (nombre, edad, equipo, fecha)
-- **Session Storage**: Contador de interacciones de la sesión actual
-- Formato JSON para estructura de datos compleja
+### 2. Storage
+- **Local Storage**: Customer data (name, age, team, date)
+- **Session Storage**: Current session interaction counter
+- JSON format for complex data structure
 
-### 3. Visualización
-- Muestra de datos guardados en tiempo real
-- Contador de interacciones visible
-- Mensajes de confirmación temporales
-- Estados de carga y error
+### 3. Display
+- Displays saved data in real-time
+- Visible interaction counter
+- Temporary confirmation messages
+- Loading and error states
 
-### 4. Gestión de Datos
-- Botón para limpiar todos los datos almacenados
-- Limpieza automática del formulario después de guardar
-- Recuperación automática de datos al cargar la página
+### 4. Data Management
+- Button to clear all stored data
+- Form auto-clears after saving
+- Automatic data retrieval when page loads
 
-## Cómo Usar la Aplicación
+## How to Use the Application 
 
-### 1. Registro de Cliente
-1. Abre el archivo `index.html` en tu navegador
-2. Completa el formulario con:
-   - **Nombre**: Tu nombre completo (mínimo 2 caracteres)
-   - **Edad**: Tu edad (entre 1 y 120 años)
-   - **Equipo Favorito**: Tu equipo deportivo favorito (mínimo 2 caracteres)
-3. Haz clic en "Guardar Datos"
+### 1. Customer Registration
+1. Open the index.html file in your browser
+2. Fill out the form with:
+   - **Name**: Your full name (minimum 2 characters)
+   - **Age**: Your age (between 1 and 120 years)
+   - **Favorite Team**: Your favorite sports team (minimum 2 characters)
+3. Click on "Save Data"
 
-### 2. Visualización de Datos
-- Los datos guardados aparecerán automáticamente en la sección "Datos Almacenados"
-- El contador de interacciones se actualiza con cada acción
-- Los datos persisten incluso después de cerrar y abrir el navegador
+### 2. Data Display
+- Saved data will automatically appear in the "Stored Data" section
+- The interaction counter updates with each action
+- Data persists even after closing and reopening the browser
 
-### 3. Gestión de Datos
-- Usa el botón "Limpiar Datos" para eliminar toda la información almacenada
-- El contador de sesión se reinicia al cerrar la pestaña del navegador
+### 3. Data Management
+- Use the "Clear Data" button to remove all stored information
+- The session counter resets when the browser tab is closed
 
-## Validaciones Implementadas
+## Implemented Validations
 
-### Campo Nombre
-- ✅ Obligatorio
-- ✅ Mínimo 2 caracteres
-- ✅ Solo texto
+### Name Field
+- ✅ Required
+- ✅ Minimum 2 characters
+- ✅ Text only
 
-### Campo Edad
-- ✅ Obligatorio
-- ✅ Número entre 1 y 120
-- ✅ Solo números enteros
+### Age Field
+- ✅ Required
+- ✅ Number between 1 and 120
+- ✅ Integers only
 
-### Campo Equipo Favorito
-- ✅ Obligatorio
-- ✅ Mínimo 2 caracteres
-- ✅ Texto libre
+### Favorite Team Field
+- ✅ Required
+- ✅ Minimum 2 characters
+- ✅ Free Text 
 
 ## Estructura de Datos
 
@@ -120,84 +121,34 @@ EntrenamientoM3S4/
 }
 ```
 
-## Características Técnicas
+## Technical Features
 
-### Manejo de Errores
-- Validación de formularios en tiempo real
-- Mensajes de error específicos por campo
-- Prevención de envío con datos inválidos
-- Manejo de errores de almacenamiento
+### Error Handling
+- Real-time form validation
+- Field-specific error messages
+- Prevents submission with invalid data
+- Handles storage-related errors
 
-### Rendimiento
-- Código optimizado y comentado
-- Uso eficiente de las APIs de almacenamiento
-- Animaciones CSS para mejor experiencia de usuario
-- Carga asíncrona de recursos
+### Performance
+- Optimized and well-commented code
+- Efficient use of storage APIs
+- CSS animations for better user experience
+- Asynchronous resource loading
 
-### Accesibilidad
-- Estructura HTML semántica
-- Etiquetas apropiadas para formularios
-- Navegación por teclado
-- Contraste de colores adecuado
-- Textos alternativos donde sea necesario
+## Contribution
 
-## Compatibilidad
+To contribute to the project:
 
-- ✅ Chrome 60+
-- ✅ Firefox 55+
-- ✅ Safari 12+
-- ✅ Edge 79+
-- ✅ Móviles (iOS Safari, Chrome Mobile)
+1. Fork the repository
+2. Create a branch for your feature (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Create a Pull Request
 
-## Personalización
+## Author
 
-### Colores del Tema
-El proyecto utiliza variables CSS que pueden ser fácilmente modificadas:
-
-```css
-:root {
-    --primary-color: #1a1a1a;      /* Color principal */
-    --secondary-color: #666666;     /* Color secundario */
-    --accent-color: #e5e5e5;       /* Color de acento */
-    --bg-primary: #ffffff;         /* Fondo principal */
-    --bg-secondary: #f8f9fa;       /* Fondo secundario */
-}
-```
-
-### Tipografía
-- Fuente principal: Inter (Google Fonts)
-- Pesos disponibles: 300, 400, 500, 600, 700
-- Tamaños responsivos para diferentes dispositivos
-
-## Mejoras Futuras
-
-- [ ] Integración con base de datos
-- [ ] Sistema de autenticación
-- [ ] Historial de registros
-- [ ] Exportación de datos
-- [ ] Temas adicionales
-- [ ] Modo oscuro
-- [ ] Notificaciones push
-- [ ] Sincronización en la nube
-
-## Contribución
-
-Para contribuir al proyecto:
-
-1. Fork el repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -am 'Agregar nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Crea un Pull Request
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## Autor
-
-Desarrollado como parte del entrenamiento de JavaScript para tiendas deportivas.
+Developed as part of JavaScript training for sports stores.
 
 ---
 
-**Nota**: Este proyecto es educativo y está diseñado para demostrar las capacidades de almacenamiento web y manipulación del DOM en aplicaciones de registro de clientes para tiendas deportivas. 
+**Note**: This project is educational and designed to demonstrate web storage and DOM manipulation capabilities in customer registration applications for sports stores.
