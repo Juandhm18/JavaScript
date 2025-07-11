@@ -106,9 +106,9 @@ EntrenamientoM3S4/
 ### Local Storage
 ```json
 {
-  "nombre": "Juan Pérez",
+  "nombre": "Juan",
   "edad": 25,
-  "equipo": "Real Madrid",
+  "equipo": "Liverpool",
   "fechaGuardado": "26/12/2024, 15:30:45"
 }
 ```
