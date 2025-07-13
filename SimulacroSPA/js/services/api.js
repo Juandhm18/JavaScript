@@ -196,7 +196,8 @@ class ApiService {
      */
     async isAvailable() {
         try {
-            await this.get('/');
+            // Intentar obtener los usuarios para verificar que la API funciona
+            await this.get('/users');
             return true;
         } catch (error) {
             console.error('API no disponible:', error);
