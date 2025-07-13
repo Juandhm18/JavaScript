@@ -1,0 +1,48 @@
+{
+  "name": "sistema-gestion-academica-spa",
+  "version": "1.0.0",
+  "description": "Sistema de Gestión Académica - Single Page Application con autenticación y roles diferenciados",
+  "main": "index.html",
+  "scripts": {
+    "server": "json-server --watch db.json --port 3000",
+    "dev": "concurrently \"npm run server\" \"live-server --port 8080\"",
+    "start": "npm run server",
+    "build": "echo 'No build process required for vanilla JS'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "spa",
+    "javascript",
+    "vanilla",
+    "academic",
+    "management",
+    "authentication",
+    "roles",
+    "json-server"
+  ],
+  "author": "Estudiante RIWI",
+  "license": "MIT",
+  "devDependencies": {
+    "json-server": "^0.17.4",
+    "concurrently": "^8.2.2",
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usuario/sistema-gestion-academica-spa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/usuario/sistema-gestion-academica-spa/issues"
+  },
+  "homepage": "https://github.com/usuario/sistema-gestion-academica-spa#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 

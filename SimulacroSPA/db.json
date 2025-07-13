@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "role": "admin",
+      "phone": "1234567890",
+      "enrollNumber": "98765432100000",
+      "dateOfAdmission": "01-Jan-2020"
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Introducción a JavaScript",
+      "description": "Curso básico de JavaScript para principiantes",
+      "startDate": "10-Jul-2025",
+      "duration": "4 semanas",
+      "capacity": 20,
+      "enrolled": 0
+    },
+    {
+      "id": 2,
+      "title": "Desarrollo Web Frontend",
+      "description": "HTML, CSS y JavaScript avanzado",
+      "startDate": "15-Jul-2025",
+      "duration": "6 semanas",
+      "capacity": 15,
+      "enrolled": 0
+    }
+  ],
+  "enrollments": []
+} 
