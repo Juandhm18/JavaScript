@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": "eb3e",
+      "username": "Emanuel",
+      "password": "emanuel123",
+      "role": "visitor",
+      "image": "https://via.placeholder.com/50"
+    }
+  ],
+  "events": [
+    {
+      "id": "c79e",
+      "name": "Evento 1",
+      "description": "Primer evento",
+      "date": "2025-07-14",
+      "capacity": 10,
+      "image": ""
+    },
+    {
+      "id": "f4d6",
+      "name": "Evento 1",
+      "description": "Primer evento",
+      "date": "2025-07-14",
+      "capacity": 10,
+      "image": ""
+    },
+    {
+      "id": "f437",
+      "name": "Evento 1",
+      "description": "Primer evento",
+      "date": "2025-07-14",
+      "capacity": 10,
+      "image": ""
+    },
+    {
+      "id": "ea8a",
+      "name": "evento2",
+      "description": "2",
+      "date": "2025-07-14",
+      "capacity": 0,
+      "image": ""
+    },
+    {
+      "id": "db41",
+      "name": "evento2",
+      "description": "2",
+      "date": "2025-07-14",
+      "capacity": 0,
+      "image": ""
+    },
+    {
+      "id": "90a4",
+      "name": "evento2",
+      "description": "2",
+      "date": "2025-07-14",
+      "capacity": 0,
+      "image": ""
+    },
+    {
+      "id": "4b29",
+      "name": "evento2",
+      "description": "2",
+      "date": "2025-07-14",
+      "capacity": 1,
+      "image": ""
+    },
+    {
+      "id": "674e",
+      "name": "Evento 1",
+      "description": "1",
+      "date": "2025-07-14",
+      "capacity": 1,
+      "image": ""
+    },
+    {
+      "id": "633f",
+      "name": "Evento 1",
+      "description": "1",
+      "date": "2025-07-14",
+      "capacity": 1,
+      "image": ""
+    },
+    {
+      "id": "921a",
+      "name": "Evento 1",
+      "description": "1",
+      "date": "2025-07-14",
+      "capacity": 1,
+      "image": ""
+    },
+    {
+      "id": "1d27",
+      "name": "1",
+      "description": "1",
+      "date": "2025-07-14",
+      "capacity": 1,
+      "image": ""
+    },
+    {
+      "id": "d787",
+      "name": "3",
+      "description": "3",
+      "date": "2025-07-14",
+      "capacity": 0,
+      "image": ""
+    },
+    {
+      "id": "3fd9",
+      "name": "3",
+      "description": "3",
+      "date": "2025-07-14",
+      "capacity": 1,
+      "image": ""
+    },
+    {
+      "id": "807f",
+      "name": "3",
+      "description": "3",
+      "date": "2025-07-14",
+      "capacity": 1,
+      "image": ""
+    },
+    {
+      "id": "62ab",
+      "name": "55",
+      "description": "55",
+      "date": "2025-07-14",
+      "capacity": 1,
+      "image": ""
+    }
+  ],
+  "visitors": [],
+  "enrollments": [
+    {
+      "id": 1,
+      "eventId": 1,
+      "userId": 1
+    },
+    {
+      "id": "0f42",
+      "userId": "eb3e",
+      "eventId": "d787"
+    }
+  ]
+}

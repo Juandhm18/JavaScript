@@ -1,0 +1,23 @@
+{
+  "name": "juanhernandez051",
+  "version": "1.0.0",
+  "description": "project created to evaluate js",
+  "keywords": [
+    "javascript"
+  ],
+  "homepage": "https://github.com/Juandhm18/JavaScript#readme",
+  "bugs": {
+    "url": "https://github.com/Juandhm18/JavaScript/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juandhm18/JavaScript.git"
+  },
+  "license": "MIT",
+  "author": "Juan Diego Hernandez Martinez",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "json-server --watch db.json --port 3000"
+  }
+}
