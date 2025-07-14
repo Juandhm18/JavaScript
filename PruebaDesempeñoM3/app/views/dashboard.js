@@ -3,7 +3,7 @@ export default function Dashboard(user) {
     <div class="dashboard-container">
       <aside class="sidebar">
         <div class="profile">
-          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile" class="profile-pic"/>
+          <img src="https://static.toiimg.com/thumb/msid-121340289,width-1280,height-720,resizemode-4/121340289.jpg" alt="Profile" class="profile-pic"/>
           <h3>${user.username}</h3>
           <span class="role">${user.role}</span>
         </div>

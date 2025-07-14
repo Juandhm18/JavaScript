@@ -4,7 +4,7 @@ export default function MyEvents(events = []) {
   for (const ev of events) {
     rows += `
       <tr>
-        <td><img src="${ev.image || 'https://via.placeholder.com/50'}" class="event-thumb" /></td>
+        <td><img src="${ev.image || ''}" class="event-thumb" /></td>
         <td>${ev.name}</td>
         <td>${ev.description}</td>
         <td>${ev.date}</td>

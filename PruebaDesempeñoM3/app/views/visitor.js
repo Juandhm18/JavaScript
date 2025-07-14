@@ -12,7 +12,7 @@ export default function Visitor(events = []) {
     const soldOut = ev.capacity <= 0;
     rows += `
       <tr>
-        <td><img src="${ev.image || 'https://via.placeholder.com/50'}" class="event-thumb" /></td>
+        <td><img src="${ev.image || ''}" class="event-thumb" /></td>
         <td>${ev.name}</td>
         <td>${ev.description}</td>
         <td>${ev.capacity}</td>
@@ -33,7 +33,7 @@ export default function Visitor(events = []) {
       <div class="sidebar">
         <h2>Events</h2>
         <div class="user-box">
-          <img src="${user.image || 'https://via.placeholder.com/50'}" class="profile-img" width="80" height="80" />
+          <img src="${user.image || ''}" class="profile-img" width="80" height="80" />
           <p class="username">${user.username}</p>
           <span class="role">${user.role}</span>
         </div>
