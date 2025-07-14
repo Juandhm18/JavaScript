@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@admin.com",
+      "password": "admin123",
+      "role": "admin",
+      "phone": "1234567890",
+      "enrollNumber": "98765432100000",
+      "dateOfAdmission": "01-Jan-2020"
+    }
+  ],
+  "enrollments": [
+    {
+        "name": "JavaScript for begginners",
+        "Description": "Basic Description",
+        "Date": "08-Dec-2021"
+    }
+  ]
+} 

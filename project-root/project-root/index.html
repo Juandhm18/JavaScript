@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal de la aplicación -->
+    <div id="app">
+        <!-- Header de la aplicación -->
+        <header id="header" class="header">
+            <div class="header-content">
+                <nav id="nav" class="nav" aria-label="Navegación principal">
+                    <!-- La navegación se cargará dinámicamente -->
+                </nav>
+            </div>
+        </header>
+
+        <!-- Contenido principal -->
+        <main id="main" class="main" tabindex="-1">
+            <!-- El contenido se cargará dinámicamente según la ruta -->
+        </main>
+
+        <!-- Sidebar para el panel de administración -->
+        <aside id="sidebar" class="sidebar" aria-label="Panel de administración">
+            <!-- El sidebar se cargará dinámicamente para administradores -->
+        </aside>
+    </div>
+
+    <!-- Modal global para mensajes o formularios -->
+    <div id="global-modal" class="modal" style="display:none;">
+        <!-- El contenido del modal se cargará dinámicamente -->
+    </div>
+
+    <!-- Scripts de la aplicación -->
+    <script src="js/utils/storage.js"></script>
+    <script src="js/utils/validation.js"></script>
+    <script src="js/services/api.js"></script>
+    <script src="js/services/auth.js"></script>
+    <script src="js/services/users.js"></script>
+    <script src="js/services/enrollments.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/sidebar.js"></script>
+    <script src="js/components/modal.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
