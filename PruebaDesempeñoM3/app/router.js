@@ -185,7 +185,7 @@ function attachEvents() {
           JSON.stringify({ id: 1, username, role: 'admin' })
         );
         navigate('/dashboard');
-      } else if (username === 'Salome' && password === 'salo123') {
+      } else if (username === 'juan' && password === 'juan123') {
         localStorage.setItem(
           'user',
           JSON.stringify({
