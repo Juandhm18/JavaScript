@@ -2,7 +2,7 @@ export default function Visitor(events = []) {
   // Recuperar usuario del localStorage
   const user = JSON.parse(localStorage.getItem('user')) || {
     username: 'Anonymous',
-    image: 'https://via.placeholder.com/50',
+    image: '',
     role: 'visitor'
   };
 
