@@ -1,204 +1,432 @@
-# 📚 Prueba de desempeño
+# 📚 SPA Events App - Sistema de Gestión de Eventos
 
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![HTML5](https://img.shields.io/badge/HTML5-E5.0+-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-3.0+-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-## Información del Desarrollador
+## 📋 Tabla de Contenidos
 
-- **Nombre Completo:** juan diego hernandez Martinez
+- [Información del Desarrollador](#-información-del-desarrollador)
+- [Descripción del Proyecto](#-descripción-del-proyecto)
+- [Características Principales](#-características-principales)
+- [Tecnologías Utilizadas](#-tecnologías-utilizadas)
+- [Instalación y Configuración](#-instalación-y-configuración)
+- [Estructura del Proyecto](#-estructura-del-proyecto)
+- [Guía de Uso](#-guía-de-uso)
+- [API Endpoints](#-api-endpoints)
+- [Arquitectura del Sistema](#-arquitectura-del-sistema)
+- [Consideraciones de Seguridad](#-consideraciones-de-seguridad)
+- [Solución de Problemas](#-solución-de-problemas)
+- [Contribución](#-contribución)
+- [Licencia](#-licencia)
+
+## 👨‍💻 Información del Desarrollador
+
+- **Nombre Completo:** Juan Diego Hernandez Martinez
 - **Clan:** Linus
 - **Correo Electrónico:** juandhm20@gmail.com
 - **Documento de Identidad:** 1192766051
+- **GitHub:** [Juandhm18](https://github.com/Juandhm18)
 
-## Descripción del Proyecto
+## 🎯 Descripción del Proyecto
 
-Esta es una aplicación de página única (SPA) desarrollada para una biblioteca pública que permite gestionar reservas de libros. La aplicación ofrece diferentes funcionalidades según el tipo de usuario: personal bibliotecario o visitante.
+Esta es una **Single Page Application (SPA)** desarrollada para gestionar eventos y reservas. La aplicación ofrece diferentes funcionalidades según el tipo de usuario:
 
-## Funcionalidades Implementadas
+- **👨‍💼 Administradores:** Gestión completa de eventos (CRUD)
+- **👥 Visitantes:** Consulta de eventos y sistema de inscripciones
 
-### 🔐 Autenticación de Usuarios
-- **Registro de nuevos usuarios** con roles: admin y visitante
-- **Inicio de sesión** para usuarios registrados
-- **Protección de rutas** según el rol usando un guardián en Router.js
-- **Persistencia de sesión** usando localStorage
+### 🎨 Características Destacadas
 
-### 👥 Funcionalidades por Tipo de Usuario
+- ✅ **Interfaz moderna y responsiva** con diseño adaptativo
+- ✅ **Sistema de autenticación** con roles y protección de rutas
+- ✅ **Navegación fluida** sin recargas de página
+- ✅ **Gestión de estado** con localStorage
+- ✅ **Validaciones de formularios** en tiempo real
+- ✅ **Manejo de errores** robusto
+- ✅ **Código modular** y bien documentado
 
-#### Bibliotecario
-- ✅ Acceso completo al módulo de events (crear, editar, eliminar)
-- ✅ Visualización de todas las reservas
-- ✅ Gestión completa del catálogo
+## 🚀 Características Principales
 
-#### Visitante
-- ✅ Consulta del catálogo disponible
-- ✅ Posibilidad de reservar evento si hay disponibilidad
-- ✅ Visualización de sus propias eventos
+### 🔐 Sistema de Autenticación
+- **Registro de usuarios** con validación de datos
+- **Inicio de sesión** seguro con persistencia
+- **Gestión de roles** (admin/visitor)
+- **Protección de rutas** según permisos
+- **Cierre de sesión** con limpieza de datos
 
-### 🛣️ Comportamiento de Rutas
-- ✅ Usuarios no autenticados son redirigidos a login
-- ✅ Usuarios autenticados que intentan acceder a /login o /register son redirigidos a /dashboard
-- ✅ Rutas protegidas según rol de usuario
-- ✅ Página 404 personalizada para rutas no encontradas
+### 📊 Gestión de Eventos
+- **Crear eventos** con información completa
+- **Editar eventos** existentes
+- **Eliminar eventos** con confirmación
+- **Visualizar eventos** en formato tabla
+- **Control de capacidad** automático
 
-### 📱 Interfaz de Usuario
-- ✅ Diseño completamente responsivo
-- ✅ Navegación fluida entre secciones
-- ✅ Formularios intuitivos
-- ✅ Interfaz moderna con gradientes y efectos visuales
+### 🎫 Sistema de Inscripciones
+- **Inscripción a eventos** para visitantes
+- **Control de disponibilidad** en tiempo real
+- **Historial de inscripciones** personal
+- **Validación de cupos** automática
 
-## Tecnologías Utilizadas
+### 🎨 Interfaz de Usuario
+- **Diseño responsivo** para todos los dispositivos
+- **Navegación intuitiva** con breadcrumbs
+- **Formularios optimizados** con validaciones
+- **Feedback visual** para todas las acciones
+- **Accesibilidad** mejorada
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Backend:** json-server (simulación de base de datos)
-- **Autenticación:** localStorage para persistencia de sesión
-- **Rutas:** Sistema de rutas personalizado con protección de acceso
+## 🛠️ Tecnologías Utilizadas
 
-## Instrucciones de Instalación y Ejecución
+### Frontend
+- **HTML5** - Estructura semántica y accesible
+- **CSS3** - Estilos modernos con Flexbox y Grid
+- **JavaScript ES6+** - Lógica de aplicación y manipulación del DOM
+- **Hash Routing** - Navegación SPA personalizada
+
+### Backend (Simulado)
+- **JSON Server** - API REST simulada
+- **LocalStorage** - Persistencia de datos del cliente
+- **Fetch API** - Comunicación HTTP
+
+### Herramientas de Desarrollo
+- **Git** - Control de versiones
+- **VS Code** - Editor de código
+- **Live Server** - Servidor de desarrollo
+
+## 📦 Instalación y Configuración
 
 ### Prerrequisitos
-- Node.js (versión 14 o superior)
-- npm (incluido con Node.js)
+- **Node.js** (versión 14 o superior)
+- **npm** (incluido con Node.js)
+- **Navegador web** moderno (Chrome, Firefox, Safari, Edge)
 
-### Paso 1: Instalar json-server
+### Paso 1: Clonar el Repositorio
 ```bash
-npm install -g json-server
+git clone https://github.com/Juandhm18/JavaScript.git
+cd JavaScript/PruebaDesempeñoM3
 ```
 
-### Paso 2: Iniciar el servidor de base de datos
+### Paso 2: Instalar Dependencias
 ```bash
-# Desde la carpeta del proyecto
+npm install
+```
+
+### Paso 3: Iniciar el Servidor de Base de Datos
+```bash
+# Opción 1: Usando el script de npm
+npm run test
+
+# Opción 2: Instalación global de json-server
+npm install -g json-server
 json-server --watch db.json --port 3000
 ```
 
-### Paso 3: Abrir la aplicación
-1. Abre el archivo `index.html` en tu navegador web
-2. O si tienes un servidor local, puedes usar:
-   ```bash
-   # Con Python 3
-   python -m http.server 8000
-   
-   # Con Node.js (si tienes http-server instalado)
-   npx http-server
-   ```
+### Paso 4: Iniciar la Aplicación
+```bash
+# Opción 1: Servidor Python
+python -m http.server 8000
 
-### Paso 4: Acceder a la aplicación
-- **URL:** `http://localhost:8000` (o el puerto que uses)
-- **API Backend:** `http://localhost:3000`
+# Opción 2: Servidor Node.js (si tienes http-server)
+npx http-server
 
-## Datos de Prueba
+# Opción 3: Abrir directamente en el navegador
+# Abre index.html en tu navegador
+```
 
-### Usuarios Predefinidos
+### Paso 5: Acceder a la Aplicación
+- **URL Frontend:** `http://localhost:8000`
+- **URL API Backend:** `http://localhost:3000`
 
-#### Bibliotecario
-- **Email:** admin
-- **Contraseña:** admin123
-- **Rol:** bibliotecario
+## 📁 Estructura del Proyecto
+
+```
+PruebaDesempeñoM3/
+├── 📄 index.html              # Página principal de la aplicación
+├── 📄 index.js                # Lógica principal y routing
+├── 📄 package.json            # Configuración del proyecto
+├── 📄 db.json                 # Base de datos simulada
+├── 📄 README.md               # Documentación del proyecto
+├── 📁 app/
+│   ├── 📄 auth.js             # Módulo de autenticación
+│   ├── 📁 css/
+│   │   ├── 📄 styles.css      # Estilos principales
+│   │   └── 📄 login.css       # Estilos específicos de login
+│   └── 📁 views/
+│       ├── 📄 login.js        # Vista de inicio de sesión
+│       ├── 📄 register.js     # Vista de registro
+│       ├── 📄 dashboard.js    # Dashboard principal
+│       ├── 📄 create-event.js # Formulario de crear evento
+│       ├── 📄 edit-event.js   # Formulario de editar evento
+│       ├── 📄 visitor.js      # Vista para visitantes
+│       ├── 📄 my-events.js    # Mis eventos inscritos
+│       ├── 📄 enrollments.js  # Gestión de inscripciones
+│       └── 📄 notFound.js     # Página 404
+└── 📁 .gitignore              # Archivos ignorados por Git
+```
+
+## 🎮 Guía de Uso
+
+### 👤 Usuarios de Prueba
+
+#### Administrador
+```
+Usuario: admin
+Contraseña: admin123
+Rol: admin
+```
 
 #### Visitante
-- **Email:** juan@email.com
-- **Contraseña:** user123
-- **Rol:** visitante
-
-
-## Estructura del Proyecto
-
 ```
-RetoSPA/
-├── index.html          # Página principal de la aplicación
-├── index.js             # Lógica principal de la SPA
-├── styles.css         # Estilos CSS de la aplicación
-├── db.json           # Base de datos simulada
-└── README.md         # Este archivo
+Usuario: juan
+Contraseña: juan123
+Rol: visitor
 ```
 
-## Funcionamiento Paso a Paso
+### 🔐 Proceso de Autenticación
 
-### 1. Inicio de la Aplicación
-- Al cargar la aplicación, se verifica si hay una sesión activa en localStorage
-- Si no hay sesión, se redirige automáticamente a la página de login
-- Si hay sesión, se redirige al dashboard correspondiente
+1. **Acceso inicial:** La aplicación redirige automáticamente al login
+2. **Registro:** Los nuevos usuarios pueden registrarse como visitantes
+3. **Login:** Ingreso con credenciales válidas
+4. **Dashboard:** Redirección automática según el rol
 
-### 2. Proceso de Autenticación
-- **Registro:** El usuario completa el formulario con sus datos y selecciona un rol
-- **Login:** El usuario ingresa su email y contraseña
-- **Validación:** Se verifica contra la base de datos simulada
-- **Persistencia:** Los datos del usuario se guardan en localStorage
+### 👨‍💼 Funcionalidades de Administrador
 
-### 3. Navegación y Rutas
-- **Router.js:** Maneja todas las rutas de la aplicación
-- **Protección:** Verifica autenticación y roles antes de mostrar contenido
-- **Redirección:** Maneja automáticamente las redirecciones según el estado del usuario
+#### Gestión de Eventos
+- **Ver todos los eventos** en formato tabla
+- **Crear nuevo evento** con formulario completo
+- **Editar evento existente** con datos precargados
+- **Eliminar evento** con confirmación de seguridad
 
-### 4. Gestión de eventos 
-- **Crear:** Formulario completo para agregar nuevos eventos
-- **Editar:** Modificar información de eventos existentes
-- **Eliminar:** Eliminar eventos
-- **Visualizar:** Lista completa de todos los eventos
-
-### 5. Gestión de Reservas
-- **admin:** Ven todas las reservas del sistema
-- **Visitantes:** Ven solo sus propias reservas
-- **Crear:** Los visitantes pueden reservar libros disponibles
-- **Estado:** Control automático de disponibilidad
-
-### 6. Sincronización con Base de Datos
-- Todas las operaciones CRUD se sincronizan con json-server
-- Actualización automática de disponibilidad al reservar
-- Manejo de errores de conexión
-
-## Características Técnicas
-
-### Sistema de Rutas
+#### Formulario de Evento
 ```javascript
-const routes = [
-  { path: '/', component: () => router.navigate('/login') },
-  { path: '/login', component: components.login, redirectIfAuth: true },
-  { path: '/register', component: components.register, redirectIfAuth: true },
-  { path: '/dashboard', component: components.dashboard, requiresAuth: true },
-  { path: '/dashboard/events', component: components.books, requiresAuth: true },
-  { path: '/dashboard/events/create', component: components.createBook, requiresAuth: true, requiresRole: 'admin' },
-  { path: '/dashboard/events/edit', component: components.editBook, requiresAuth: true, requiresRole: 'admin' },
-  { path: '*', component: components.notFound }
-];
+{
+  name: "Nombre del Evento",
+  description: "Descripción detallada",
+  date: "2025-01-15",
+  capacity: 50,
+  image: "URL de la imagen"
+}
 ```
 
-### Persistencia de Datos
-- **localStorage:** Para información de sesión del usuario
-- **json-server:** Simulación de base de datos RESTful
+### 👥 Funcionalidades de Visitante
 
-## API Endpoints
+#### Consulta de Eventos
+- **Ver eventos disponibles** con información completa
+- **Filtrar por disponibilidad** automáticamente
+- **Inscribirse en eventos** con cupos disponibles
+
+#### Mis Eventos
+- **Ver eventos inscritos** personal
+- **Historial de inscripciones** completo
+- **Información detallada** de cada evento
+
+## 🔌 API Endpoints
 
 ### Usuarios
-- `GET /users` - Obtener todos los usuarios
-- `POST /users` - Crear nuevo usuario
-- `GET /users?email={email}` - Buscar usuario por email
+```http
+GET    /users                    # Obtener todos los usuarios
+POST   /users                    # Crear nuevo usuario
+GET    /users?email={email}      # Buscar usuario por email
+```
 
-## Consideraciones de Seguridad
+### Eventos
+```http
+GET    /events                   # Obtener todos los eventos
+POST   /events                   # Crear nuevo evento
+GET    /events/{id}              # Obtener evento específico
+PUT    /events/{id}              # Actualizar evento
+PATCH  /events/{id}              # Actualizar parcialmente
+DELETE /events/{id}              # Eliminar evento
+```
 
-- Las contraseñas se almacenan en texto plano (solo para demostración)
-- En producción, se debería implementar hash de contraseñas
-- Validación de entrada en formularios
-- Protección contra acceso no autorizado a rutas
+### Inscripciones
+```http
+GET    /enrollments              # Obtener todas las inscripciones
+POST   /enrollments              # Crear nueva inscripción
+GET    /enrollments?userId={id}  # Inscripciones de un usuario
+```
 
+## 🏗️ Arquitectura del Sistema
 
-## Solución de Problemas
+### Patrón de Diseño
+La aplicación sigue el patrón **MVC (Model-View-Controller)** simplificado:
+
+- **Model:** `db.json` (datos) y `auth.js` (lógica de negocio)
+- **View:** Archivos en `app/views/` (interfaz de usuario)
+- **Controller:** `index.js` (lógica de control y routing)
+
+### Flujo de Datos
+```
+Usuario → Event Listener → Controller → API → Database
+   ↑                                        ↓
+   ←────────── View ←─── Response ←─────────
+```
+
+### Sistema de Routing
+```javascript
+const routes = {
+  '/': '/login',
+  '/login': { component: Login, public: true },
+  '/register': { component: Register, public: true },
+  '/dashboard': { component: Dashboard, requiresAuth: true },
+  '/dashboard/events/create': { component: CreateEvent, requiresRole: 'admin' },
+  '/dashboard/events/edit/:id': { component: EditEvent, requiresRole: 'admin' },
+  '/dashboard/my-events': { component: MyEvents, requiresRole: 'visitor' }
+};
+```
+
+### Gestión de Estado
+- **LocalStorage:** Persistencia de sesión de usuario
+- **Estado Global:** Información del usuario actual
+- **Estado Local:** Datos específicos de cada vista
+
+## 🔒 Consideraciones de Seguridad
+
+### Implementado
+- ✅ **Validación de entrada** en formularios
+- ✅ **Protección de rutas** según roles
+- ✅ **Sanitización básica** de datos
+- ✅ **Manejo de errores** sin exposición de información sensible
+
+### Mejoras Recomendadas para Producción
+- 🔒 **Hash de contraseñas** (bcrypt)
+- 🔒 **Tokens JWT** para autenticación
+- 🔒 **HTTPS** obligatorio
+- 🔒 **Rate limiting** en API
+- 🔒 **Validación del lado servidor**
+- 🔒 **CORS** configurado correctamente
+- 🔒 **Headers de seguridad** (HSTS, CSP)
+
+### Ejemplo de Implementación de Seguridad
+```javascript
+// Hash de contraseñas (recomendado)
+import bcrypt from 'bcrypt';
+
+const hashPassword = async (password) => {
+  const saltRounds = 10;
+  return await bcrypt.hash(password, saltRounds);
+};
+
+// Validación de entrada
+const validateEventData = (data) => {
+  const errors = [];
+  
+  if (!data.name || data.name.length < 3) {
+    errors.push('El nombre debe tener al menos 3 caracteres');
+  }
+  
+  if (!data.date || new Date(data.date) < new Date()) {
+    errors.push('La fecha debe ser futura');
+  }
+  
+  if (!data.capacity || data.capacity <= 0) {
+    errors.push('La capacidad debe ser mayor a 0');
+  }
+  
+  return errors;
+};
+```
+
+## 🐛 Solución de Problemas
 
 ### Error de Conexión con json-server
-- Verificar que json-server esté ejecutándose en el puerto 3000
-- Comprobar que el archivo db.json existe y es válido
+```bash
+# Verificar que json-server esté ejecutándose
+curl http://localhost:3000/events
+
+# Reiniciar el servidor
+json-server --watch db.json --port 3000 --host 0.0.0.0
+```
 
 ### Problemas de CORS
-- Asegurarse de que json-server esté configurado correctamente
-- Verificar que la URL de la API sea correcta en app.js
+```javascript
+// Configuración de json-server con CORS
+json-server --watch db.json --port 3000 --middlewares ./cors.js
+
+// cors.js
+module.exports = (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  next();
+};
+```
 
 ### Problemas de Rendimiento
-- La aplicación está optimizada para cargas pequeñas
-- Para grandes volúmenes de datos, considerar paginación
+- **Paginación:** Implementar para grandes volúmenes de datos
+- **Caché:** Usar localStorage para datos frecuentes
+- **Lazy Loading:** Cargar vistas bajo demanda
 
-## Contacto
+### Debugging
+```javascript
+// Habilitar logs detallados
+localStorage.setItem('debug', 'true');
 
-Para cualquier consulta sobre este proyecto, contactar a:
-- **Email:** [juandhm20@gmail.com]
-- **GitHub:** [Juandhm18]
+// Verificar estado de la aplicación
+console.log('Usuario actual:', getCurrentUser());
+console.log('Rutas disponibles:', routes);
+```
+
+## 🤝 Contribución
+
+### Cómo Contribuir
+1. **Fork** el repositorio
+2. **Crea** una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
+3. **Commit** tus cambios (`git commit -am 'Agregar nueva funcionalidad'`)
+4. **Push** a la rama (`git push origin feature/nueva-funcionalidad`)
+5. **Crea** un Pull Request
+
+### Estándares de Código
+- **ESLint** para linting de JavaScript
+- **Prettier** para formateo de código
+- **Comentarios JSDoc** para documentación
+- **Tests unitarios** para nuevas funcionalidades
+
+### Estructura de Commits
+```
+feat: agregar sistema de notificaciones
+fix: corregir error en validación de formularios
+docs: actualizar documentación de API
+style: mejorar estilos del dashboard
+refactor: optimizar función de carga de eventos
+test: agregar tests para módulo de autenticación
+```
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
+
+```mit
+MIT License
+
+Copyright (c) 2025 Juan Diego Hernandez Martinez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## 📞 Contacto
+
+Para cualquier consulta sobre este proyecto:
+
+- **Email:** [juandhm20@gmail.com](mailto:juandhm20@gmail.com)
+- **GitHub:** [Juandhm18](https://github.com/Juandhm18)
+- **LinkedIn:** [Juan Diego Hernandez](https://linkedin.com/in/juandhm18)
 
 ---
 
-**Nota:** Este proyecto fue desarrollado como parte de un reto de desarrollo frontend para demostrar habilidades en JavaScript, HTML5, CSS y gestión de aplicaciones SPA. 
+**Nota:** Este proyecto fue desarrollado como parte de un reto de desarrollo frontend para demostrar habilidades en JavaScript, HTML5, CSS y gestión de aplicaciones SPA. El código está optimizado para aprendizaje y puede ser mejorado para uso en producción. 

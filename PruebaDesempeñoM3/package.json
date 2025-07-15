@@ -1,9 +1,16 @@
 {
-  "name": "juanhernandez051",
+  "name": "spa-events-app",
   "version": "1.0.0",
-  "description": "project created to evaluate js",
+  "description": "Sistema de gestión de eventos desarrollado como SPA con JavaScript vanilla",
   "keywords": [
-    "javascript"
+    "javascript",
+    "spa",
+    "events",
+    "management",
+    "vanilla-js",
+    "html5",
+    "css3",
+    "json-server"
   ],
   "homepage": "https://github.com/Juandhm18/JavaScript#readme",
   "bugs": {
@@ -14,10 +21,37 @@
     "url": "git+https://github.com/Juandhm18/JavaScript.git"
   },
   "license": "MIT",
-  "author": "Juan Diego Hernandez Martinez",
-  "type": "commonjs",
+  "author": {
+    "name": "Juan Diego Hernandez Martinez",
+    "email": "juandhm20@gmail.com",
+    "url": "https://github.com/Juandhm18"
+  },
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "json-server --watch db.json --port 3000"
-  }
+    "start": "json-server --watch db.json --port 3000",
+    "dev": "concurrently \"npm run start\" \"npm run serve\"",
+    "serve": "http-server -p 8000 -o",
+    "test": "json-server --watch db.json --port 3000",
+    "build": "echo 'No build step required for vanilla JS'",
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write \"**/*.{js,html,css,json,md}\"",
+    "clean": "rm -rf node_modules package-lock.json"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "http-server": "^14.1.1",
+    "json-server": "^0.17.4",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

@@ -1,14 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPA Events App</title>
+  <meta name="description" content="Sistema de gestión de eventos - SPA desarrollada con JavaScript vanilla" />
+  <meta name="keywords" content="eventos, gestión, SPA, JavaScript, HTML5, CSS3" />
+  <meta name="author" content="Juan Diego Hernandez Martinez" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://github.com/Juandhm18/JavaScript/" />
+  <meta property="og:title" content="SPA Events App - Sistema de Gestión de Eventos" />
+  <meta property="og:description" content="Aplicación SPA para gestión de eventos desarrollada con JavaScript vanilla" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://github.com/Juandhm18/JavaScript/" />
+  <meta property="twitter:title" content="SPA Events App - Sistema de Gestión de Eventos" />
+  <meta property="twitter:description" content="Aplicación SPA para gestión de eventos desarrollada con JavaScript vanilla" />
+  
+  <title>SPA Events App - Sistema de Gestión de Eventos</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>" />
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="./app/css/styles.css" />
-  <link rel="stylesheet" href="./app/css/login.css">
+  <link rel="stylesheet" href="./app/css/login.css" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="./index.js" as="script" />
+  
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#8240ec" />
 </head>
 <body>
-  <div id="app"></div>
+  <!-- Loading indicator -->
+  <div id="loading" class="loading-overlay">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Cargando aplicación...</p>
+    </div>
+  </div>
+  
+  <!-- Main application container -->
+  <div id="app" role="main" aria-label="Aplicación de gestión de eventos"></div>
+  
+  <!-- Error boundary -->
+  <div id="error-boundary" class="error-boundary" style="display: none;">
+    <div class="error-content">
+      <h2>⚠️ Error en la aplicación</h2>
+      <p>Ha ocurrido un error inesperado. Por favor, recarga la página.</p>
+      <button onclick="window.location.reload()" class="btn">Recargar página</button>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
   <script type="module" src="./index.js"></script>
+  
+  <!-- Service Worker registration (for future PWA features) -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        // Service worker registration can be added here for PWA features
+        console.log('Service Worker support detected');
+      });
+    }
+  </script>
+  
+  <!-- Error handling -->
+  <script>
+    window.addEventListener('error', (event) => {
+      console.error('Global error:', event.error);
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('error-boundary').style.display = 'flex';
+    });
+    
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('Unhandled promise rejection:', event.reason);
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('error-boundary').style.display = 'flex';
+    });
+  </script>
 </body>
 </html>
