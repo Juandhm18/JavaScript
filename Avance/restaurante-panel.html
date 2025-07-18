@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Restaurante - Plataforma</title>
+</head>
+<body>
+  <header>
+    <h1>Panel Administrativo de Restaurante</h1>
+    <nav>
+      <ul>
+        <li><a href="#configuracion">Configuración Inicial</a></li>
+        <li><a href="#mesas">Gestión de Mesas</a></li>
+        <li><a href="#pedidos">Pedidos y Pagos</a></li>
+        <li><a href="#menu">Menú y Reputación</a></li>
+        <li><a href="#personal">Gestión de Personal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. Registro y Configuración Inicial -->
+    <section id="configuracion">
+      <h2>Registro y Configuración Inicial</h2>
+      <form>
+        <label>Nombre del local
+          <input type="text" name="nombre_local" required>
+        </label>
+        <label>Tipo de establecimiento
+          <select name="tipo_establecimiento" required>
+            <option>Restaurante</option>
+            <option>Bar</option>
+            <option>Cafetería</option>
+            <option>Otro</option>
+          </select>
+        </label>
+        <label>Tipo de comida
+          <input type="text" name="tipo_comida" placeholder="Mexicana, vegana, gourmet..." required>
+        </label>
+        <label>Ubicación exacta
+          <input type="text" name="ubicacion" required>
+        </label>
+        <label>Horarios de atención
+          <input type="text" name="horarios" required>
+        </label>
+        <label>Datos de contacto
+          <input type="text" name="contacto" required>
+        </label>
+        <button type="submit">Guardar configuración</button>
+      </form>
+      <div class="info-publica">
+        <h3>Información visible para usuarios y visitantes</h3>
+        <!-- Aquí se mostrará la info pública del restaurante -->
+      </div>
+    </section>
+
+    <!-- 2. Panel administrativo en tiempo real -->
+    <section id="mesas">
+      <h2>Gestión de Mesas Activas</h2>
+      <div class="mesas-activas">
+        <h3>Mesas y Dispositivos Conectados</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Mesa</th>
+              <th>Dispositivo</th>
+              <th>Pedidos</th>
+              <th>Solicitudes</th>
+              <th>Tiempo activo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Filas dinámicas de mesas activas -->
+          </tbody>
+        </table>
+      </div>
+      <div class="monitoreo-flujo">
+        <h3>Monitoreo de Tiempos y Flujo del Salón</h3>
+        <!-- Gráficas o indicadores de flujo -->
+      </div>
+    </section>
+
+    <!-- 3. Control de pedidos y pagos -->
+    <section id="pedidos">
+      <h2>Control de Pedidos y Pagos</h2>
+      <div class="seguimiento-pedidos">
+        <h3>Pedidos Actuales</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Ítems</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Pedidos en curso -->
+          </tbody>
+        </table>
+      </div>
+      <div class="historial-pagos">
+        <h3>Historial de Pagos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Monto</th>
+              <th>Método</th>
+              <th>Fecha</th>
+              <th>Facturación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Pagos realizados -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. Edición de menú y gestión de reputación -->
+    <section id="menu">
+      <h2>Edición de Menú y Reputación</h2>
+      <div class="editor-menu">
+        <h3>Editor de Menú</h3>
+        <!-- Formulario o tabla para editar platos -->
+      </div>
+      <div class="estadisticas-menu">
+        <h3>Estadísticas de Platos</h3>
+        <ul>
+          <li>Más vendidos por período/categoría</li>
+          <li>Mejor valorados (análisis de comentarios)</li>
+          <li>Reseñas destacadas y análisis de sentimiento</li>
+          <li>Perfil y feedback de clientes frecuentes</li>
+          <li>Tiempos de preparación y picos de afluencia</li>
+        </ul>
+      </div>
+      <div class="feedback">
+        <h3>Feedback y Toma de Decisiones</h3>
+        <!-- Panel de feedback y sugerencias -->
+      </div>
+    </section>
+
+    <!-- 5. Gestión de plantilla y horarios -->
+    <section id="personal">
+      <h2>Gestión de Personal y Horarios</h2>
+      <div class="panel-personal">
+        <h3>Administrar Personal</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Puesto</th>
+              <th>Contacto</th>
+              <th>Horario</th>
+              <th>Mesas Atendidas</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Empleados registrados -->
+          </tbody>
+        </table>
+      </div>
+      <div class="reportes-personal">
+        <h3>Reportes de Desempeño y Asignación</h3>
+        <!-- Gráficas o reportes de desempeño -->
+      </div>
+    </section>
+  </main>
+</body>
+</html> 
